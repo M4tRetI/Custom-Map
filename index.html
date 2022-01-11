@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visita guidata Pisa, 3BIEN</title>
+
+    <!-- Redirect http client to https -->
+    <script> 
+        if (location.protocol != 'https:') location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    </script>
+
+    <!-- Map resources -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+    <!-- Site css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="resetZoom()">
+
+    <header>
+        <img src="iti.png" oncontextmenu="showAuthor(event)">
+        <h1>I.T.I.S. "G. Marconi" Pontedera &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3BIEN</h1>
+    </header>
+
+    <aside id="author"><font id="codedby">Coded by</font> <br> <font size="0.6rem">2899d03ec2d3e066ab9e2062d89a4a742f547151</font></aside>
+
+    <div id="mappa"></div>
+
+    <div class="left-content">
+        <div id="toggle_description" onclick="toggleDescription()"><i class="fas fa-chevron-left"></i></div>
+
+        <main id="description_container" >
+
+            <div id="menuDescription">
+                <button onclick="backToSpotList()"><i class="fas fa-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;Indietro</button>
+            </div>
+        <!--<section id="menuLuoghi">
+            <h1>Pisa medievale</h1>
+        </section>-->
+            <div id="spotList"><br><br>
+            <!--<h1 id="title">Benvenuti alla visita guidata "Pisa medievale", offerta dalla classe 3BIEN</h1>
+            <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusamus. Officiis cumque ducimus consequuntur tempore fugit soluta ipsa aliquam sed sequi quas! Velit incidunt error mollitia, nesciunt accusantium fugit animi.</p>
+         --></div>
+            <div id="description">
+                <h1 class="spotList__title"></h1>
+                <p class="spotList__text"></p>
+            </div>
+        
+            <img src="https://www.drupal.org/files/issues/throbber_12.gif" alt="Caricamento" id="loading">
+        </main> 
+    </div>
+
+    <script>
+        
+	    var map = L.map('mappa').setView([43.7198588,10.3979164-(screen.width*65/100)/210000], 16);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            maxZoom: 20,
+            minZoom: 15,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        }).addTo(map);
+
+        map.invalidateSize();
+
+        map.on('click', function(ev) {
+
+            showDescriptionOfMarker(ev);
+        });
+
+    </script>
+
+    <script src="main.js" async defer></script> 
+    <script src="https://kit.fontawesome.com/9d64499668.js" crossorigin="anonymous"></script>
+</body>
+</html>
