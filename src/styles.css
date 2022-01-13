@@ -1,4 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --header-background: #FFFFFF;
+    --titles-color: #171818;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --header-background: #171818;
+        --titles-color: #F1F1F1;
+    }
 }

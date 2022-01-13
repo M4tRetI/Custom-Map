@@ -1,0 +1,35 @@
+header {
+    width: 100%;
+    --header-height: 80px;
+    height: var(--header-height);
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: var(--header-background);
+    z-index: 999999;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 15px 1px rgb(0,0,0,0.1);
+}
+header.reduced {
+    width: 65%;
+}
+div.organization div {
+    top: 50%;
+    --header-content-extern-padding: 3.5%;
+    left: var(--header-content-extern-padding);
+    position: absolute;
+    transform: translateY(-50%);
+}
+div.organization div.logo img {
+    height: calc(var(--header-height) * 0.75);
+}
+div.organization div.name {
+    left: initial;
+    right: var(--header-content-extern-padding);
+}
+div.organization div.name h1 {
+    padding: 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--titles-color);
+}
