@@ -1,0 +1,31 @@
+article {
+    border: 1px solid var(--card-border-color);
+    box-sizing: border-box;
+    padding: 2.2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    transition: all 0.22s ease;
+    cursor: pointer;
+}
+article:hover {
+    background: var(--card-hover-background);
+}
+article h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--titles-color);
+    opacity: 0.95;
+}
+article p {
+    font-size: 1.1rem;
+    margin: 1.6rem 0;
+    line-height: 1.4rem;
+}
+
+span.tag {
+    padding: 3px 8px;
+    margin-left: 0.7rem; 
+    background: var(--tag-background);
+    border-radius: 2px;
+    font-size: .85rem;
+}

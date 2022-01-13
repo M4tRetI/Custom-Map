@@ -8,7 +8,7 @@ div.container {
     background: var(--sidePanel-background);
     padding: 3rem;
     z-index: 999998;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 section {
     margin-top: 5rem;

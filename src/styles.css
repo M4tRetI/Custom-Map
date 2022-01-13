@@ -7,11 +7,15 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--titles-color);
+    margin: 0;
 }
 
 :root {
     --header-background: #FFFFFF;
     --sidePanel-background: var(--header-background);
+    --card-border-color: var(--text-color);
+    --card-hover-background: rgba(42, 175, 135, 0.02);
+    --tag-background: rgba(42, 175, 135, 0.25);
     --titles-color: #171818;
     --text-color: #1f2020;
 }
