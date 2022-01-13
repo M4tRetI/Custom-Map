@@ -1,5 +1,6 @@
 header {
-    width: 100%;
+    --header-reduced-width: 65%;
+    width: var(--header-reduced-width);
     --header-height: 80px;
     height: var(--header-height);
     top: 0;
@@ -10,8 +11,8 @@ header {
     transition: all 0.2s ease;
     box-shadow: 0 0 15px 1px rgb(0,0,0,0.1);
 }
-header.reduced {
-    width: 65%;
+header.full-width {
+    width: 100%;
 }
 div.organization div {
     top: 50%;
@@ -27,9 +28,8 @@ div.organization div.name {
     left: initial;
     right: var(--header-content-extern-padding);
 }
-div.organization div.name h1 {
+div.organization div.name h2 {
     padding: 0;
     font-weight: 400;
     font-size: 1.8rem;
-    color: var(--titles-color);
 }

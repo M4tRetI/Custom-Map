@@ -1,0 +1,15 @@
+div.container {
+    --sidePanel-width: 35%;
+    width: var(--sidePanel-width);
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: var(--sidePanel-background);
+    padding: 3rem;
+    z-index: 999998;
+    box-sizing:border-box;
+}
+section {
+    margin-top: 5rem;
+}
