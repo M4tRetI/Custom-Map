@@ -7,12 +7,40 @@ div.container {
     position: absolute;
     background: var(--sidePanel-background);
     padding: 3rem;
-    z-index: 999998;
+    z-index: 999999;
     box-sizing: border-box;
     overflow: auto;
 }
 section {
-    margin-top: 5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+section div.description-content {
+    color: var(--highcontrast-text-color);
+    backdrop-filter: blur(45px);
+    border-radius: 0 0 18px 18px;
+    padding: 2.5rem 1.8rem 1.8rem 1.8rem;
+}
+section div.description-content h1 {
+    color: inherit;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+section div.description-content p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin: 0;
+}
+section div.image-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--side-panel-description-image-height);
+    background: url('../../assets/side-panel-example_image.jpg') no-repeat top;
+    background-size: cover;
+    border-radius: 18px;
+    padding-top: 28.6rem;
 }
 
 /* Custom scrollbar */
@@ -21,7 +49,6 @@ div.container::-webkit-scrollbar {
     margin-right: 2rem;
 }
 div.container::-webkit-scrollbar-track {
-    background: var(--scrollbar-track-background);
     margin: calc(var(--header-height) + 0.5rem) 0 1.5rem 0;
     border-radius: 50px;
 }
@@ -30,7 +57,4 @@ div.container::-webkit-scrollbar-thumb {
     border-radius: 100px;
     background-color: var(--scrollbar-thumb-background);
     background-clip: content-box;
-}
-div.container::-webkit-scrollbar-thumb:hover {
-    background: #44444460;
 }

@@ -2,7 +2,7 @@ article {
     border: 1px solid var(--card-border-color);
     box-sizing: border-box;
     padding: 2.2rem;
-    border-radius: 15px;
+    border-radius: 18px;
     margin-bottom: 2rem;
     transition: all 0.22s ease;
     cursor: pointer;

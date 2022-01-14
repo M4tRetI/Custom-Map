@@ -6,7 +6,7 @@ header {
     right: 0;
     position: absolute;
     background: var(--header-background);
-    z-index: 999999;
+    z-index: 999998;
     transition: all 0.2s ease;
     box-shadow: 0 0 15px 1px rgb(0,0,0,0.1);
 }
