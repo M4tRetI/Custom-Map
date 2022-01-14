@@ -11,6 +11,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
+    --header-height: 80px;
+
     --header-background: #FFFFFF;
     --sidePanel-background: var(--header-background);
     --card-border-color: var(--text-color);
@@ -18,6 +20,9 @@ h1, h2, h3, h4, h5, h6 {
     --tag-background: rgba(42, 175, 135, 0.25);
     --titles-color: #171818;
     --text-color: #1f2020;
+
+    --scrollbar-track-background: rgba(5,5,5,0.2);
+    --scrollbar-thumb-background: rgb(42, 175, 135);
 }
 
 @media (prefers-color-scheme: dark) {

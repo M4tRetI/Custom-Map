@@ -1,7 +1,6 @@
 header {
     --header-reduced-width: 65%;
     width: var(--header-reduced-width);
-    --header-height: 80px;
     height: var(--header-height);
     top: 0;
     right: 0;

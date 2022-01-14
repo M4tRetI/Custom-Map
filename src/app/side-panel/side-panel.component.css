@@ -9,7 +9,28 @@ div.container {
     padding: 3rem;
     z-index: 999998;
     box-sizing: border-box;
+    overflow: auto;
 }
 section {
     margin-top: 5rem;
+}
+
+/* Custom scrollbar */
+div.container::-webkit-scrollbar {
+    width: 18px;
+    margin-right: 2rem;
+}
+div.container::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-background);
+    margin: calc(var(--header-height) + 0.5rem) 0 1.5rem 0;
+    border-radius: 50px;
+}
+div.container::-webkit-scrollbar-thumb {
+    border: 5px solid transparent;
+    border-radius: 100px;
+    background-color: var(--scrollbar-thumb-background);
+    background-clip: content-box;
+}
+div.container::-webkit-scrollbar-thumb:hover {
+    background: #44444460;
 }
