@@ -18,7 +18,7 @@ div.organization div {
     transform: translateY(-50%);
 }
 div.organization div.logo img {
-    height: calc(var(--header-height) * 0.75);
+    height: calc(var(--header-height) * 0.55);
 }
 div.organization div.name {
     left: initial;
@@ -27,5 +27,5 @@ div.organization div.name {
 div.organization div.name h2 {
     padding: 0;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
