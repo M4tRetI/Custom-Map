@@ -15,7 +15,6 @@
 }
 #side-panel:hover + #toggle-sidePanel {
     opacity: 1;
-    color: var(--toggle-sidePanel-hover-color);
 }
 
 #toggle-sidePanel {
