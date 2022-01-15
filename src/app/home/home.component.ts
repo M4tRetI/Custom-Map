@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   public isSidePanelReduced = false;
 
-  constructor () { console.log (this.isSidePanelReduced);}
+  constructor () { }
   
   ngOnInit () { }
 

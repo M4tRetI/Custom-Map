@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PlatformCustomizationService } from 'src/services/platform-customization.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,6 @@ export class AppComponent {
 
   constructor () {
     AppComponent.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    PlatformCustomizationService.importCustomizations ();
   }
 }

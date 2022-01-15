@@ -1,0 +1,28 @@
+<h3 class="title">{{ data['title'] }}</h3>
+
+<div class="micpImages">
+    <img *ngFor="let micp_imagesrc of data['micp']" [src]="micp_imagesrc">
+</div>
+
+<p class="text">
+    {{ data['text'] | arraybr }}
+</p>
+
+<div class="someimages">
+    <img *ngFor="let imagesrc of data['images']" [src]="imagesrc">
+</div>
+
+<div class="tags">
+    <h4>Tag della scheda:</h4>
+    <span class="tag" *ngFor="for tagname of data['tags']">{{ tag }}</span>
+</div>
+<div class="authors">
+    <h4>Tag della scheda:</h4>
+    <span class="author" *ngFor="for authorname of data['authors']">{{ authorname }}</span>
+</div>
+
+<style>
+    
+</style>
+
+{{ data['custom-css'] }}

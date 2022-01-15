@@ -7,6 +7,8 @@ import { MapComponent } from './map/map.component';
 import { CardComponent } from './card/card.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { HomeComponent } from './home/home.component';
+import { ArraybrPipe } from '../pipes/arraybr.pipe';
+import { CardPanelComponent } from './card-panel/card-panel.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HomeComponent } from './home/home.component';
     MapComponent,
     CardComponent,
     SidePanelComponent,
-    HomeComponent
+    HomeComponent,
+    ArraybrPipe,
+    CardPanelComponent
   ],
   imports: [
     BrowserModule

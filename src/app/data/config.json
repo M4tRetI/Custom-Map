@@ -1,0 +1,22 @@
+{
+    "page-name": "La lista di esempio più completa",
+    "page-description": "Questa è una lista di card come esempio, per poter sviluppare la UI dell'applicazione web. Lorem ipsum dolor sit amet anche se non mi riconrdo, come esattamente, va avanti",
+    "page-organization": {
+        "name": "ITIS G. Marconi Pontedera",
+        "icon": "img/logo.webp"
+    },
+    "page-settings": {
+        "autoTheme": true
+    },
+    "map": {
+        "minZoom": 0,
+        "maxZoom": 30,
+        "initial": {
+            "position": [51.505, -0.09],
+            "zoom": 13
+        },
+        "marker": {
+            "icon": "img/marker.png"
+        }
+    }
+}
