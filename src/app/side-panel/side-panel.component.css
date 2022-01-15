@@ -36,7 +36,7 @@ section div.image-container {
     box-sizing: border-box;
     width: 100%;
     height: var(--side-panel-description-image-height);
-    background: url('../../assets/side-panel-example_image.jpg') no-repeat top;
+    background: url('../../assets/img/side-panel-example_image.jpg') no-repeat top;
     background-size: cover;
     border-radius: 18px;
     padding-top: 28.6rem;
