@@ -4,18 +4,31 @@ body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     color: var(--text-color);
+    overflow: hidden;
+    background: var(--header-background);
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--titles-color);
     margin: 0;
 }
+div.leaflet-control-zoom.leaflet-bar.leaflet-control > a {
+    background: var(--header-background) !important;
+    color: var(--text-color) !important;
+}
 
 :root {
+    --header-maximized-width: 100%;
+    --header-reduced-width: 65%;
+    --header-width: var(--header-reduced-width);
     --header-height: 80px;
     --side-panel-description-image-height: 85vh;
+    --sidePanel-width: 35%;
+    --map-height: calc(100% - var(--header-height));
 
     --header-background: #FFFFFF;
     --sidePanel-background: var(--header-background);
+    --toggle-sidePanel-background: var(--header-background);
+    --toggle-sidePanel-hover-color: var(--scrollbar-thumb-background);
     --card-border-color: var(--text-color);
     --card-hover-background: rgba(28, 60, 201, 0.02);
     --tag-background: rgba(28, 60, 201, 0.25);

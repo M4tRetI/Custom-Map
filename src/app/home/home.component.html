@@ -1,0 +1,15 @@
+<div id="header" class="reduced">
+    <app-header></app-header>
+</div>
+
+<div id="mappa">
+    <app-map></app-map>
+</div>
+
+<div id="side-panel">
+    <app-side-panel></app-side-panel>
+</div>
+
+<div id="toggle-sidePanel" (click)="toggleSidePanel ()">
+    <i class="fas fa-chevron-{{ isSidePanelReduced ? 'right' : 'left' }}"></i>
+</div>

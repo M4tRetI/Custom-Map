@@ -1,6 +1,5 @@
 header {
-    --header-reduced-width: 65%;
-    width: var(--header-reduced-width);
+    width: var(--header-width);
     height: var(--header-height);
     top: 0;
     right: 0;
@@ -10,9 +9,7 @@ header {
     transition: all 0.2s ease;
     box-shadow: 0 0 15px 1px rgb(0,0,0,0.1);
 }
-header.full-width {
-    width: 100%;
-}
+
 div.organization div {
     top: 50%;
     --header-content-extern-padding: 3.5%;

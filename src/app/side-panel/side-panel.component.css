@@ -1,5 +1,4 @@
 div.container {
-    --sidePanel-width: 35%;
     width: var(--sidePanel-width);
     height: 100%;
     top: 0;
