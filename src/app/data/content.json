@@ -3,7 +3,7 @@
         {
             "unique_id": "prima-card",
             "title": "Lorem ipsum dolor sit amet",
-            "brief-description": [
+            "brief_description": [
                 "Questo è il primo esempio, seppur scarno, di un articolo che non so cosa scriverci all'interno.",
                 "Anche se ci provo verrà comunque uno schifo a profusione"
             ],
@@ -12,11 +12,11 @@
         },
         {
             "unique_id": "seconda-card",
-            "title": "Questa è la prova del secolo, supercalifragilistichespiralidoso",
-            "brief-description": [
+            "title": "Questa è veramente la prova del secolo supercalifragilistichespiralidoso",
+            "brief_description": [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit, Quisque molestie, orci at lacinia egestas, risus quam euismod libero, id blandit ligula erat ut nibh in dapibus commodo"
             ],
-            "tags": ["Parco dei salici", "Sarajevo", "Anagrafica", "Biografia", "Parziale"],
+            "tags": ["Parco dei salici", "Altro esempio", "Sarajevo", "Anagrafica", "Biografia", "Parziale"],
             "coord": [50.95, -0.06]
         }
     ],

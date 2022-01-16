@@ -23,6 +23,5 @@ export class PlatformCustomizationService {
       });
     }
     PlatformCustomizationService.content = compattedContentData;
-    console.log (compattedContentData);
   }
 }

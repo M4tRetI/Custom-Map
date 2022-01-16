@@ -39,10 +39,8 @@ div.leaflet-control-zoom.leaflet-bar.leaflet-control > a {
     --scrollbar-thumb-background: rgb(28, 60, 201);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --header-background: #171818;
-        --titles-color: #F1F1F1;
-        --text-color: #e7e7e7;
-    }
+[page-theme="dark"] {
+    --header-background: #171818;
+    --titles-color: #F1F1F1;
+    --text-color: #e7e7e7;
 }

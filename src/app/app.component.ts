@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PlatformCustomizationService } from 'src/services/platform-customization.service';
+import { PlatformCustomizationService as PCS } from 'src/services/platform-customization.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,9 @@ export class AppComponent {
   static isDarkMode: boolean;
 
   constructor () {
-    AppComponent.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    PlatformCustomizationService.importCustomizations ();
+    AppComponent.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    PCS.importCustomizations ();
+    AppComponent.isDarkMode = AppComponent.isDarkMode && PCS.config['page-settings']['autoTheme'];
+    document.documentElement.setAttribute ("page-theme", (AppComponent.isDarkMode ? "dark" : "light")); 
   }
 }

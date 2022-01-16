@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 import * as L from 'leaflet';
+import { PlatformCustomizationService as PCS } from '../../services/platform-customization.service';
 
 import { accessToken } from "../../environments/secrets";
 
@@ -12,11 +13,13 @@ import { accessToken } from "../../environments/secrets";
 })
 export class MapComponent implements OnInit {
   map: L.Map = null as any;
-  
+  public marker_icon: string = "../assets/";
 
   constructor () { }
 
-  ngOnInit () { }
+  ngOnInit () {
+    this.marker_icon += PCS.config['map']['marker']['icon'];
+  }
 
   ngAfterViewInit () {
     this.initMap ();
@@ -26,14 +29,14 @@ export class MapComponent implements OnInit {
     let map_type = (AppComponent.isDarkMode ? 'dark' : 'sunny');
     
     this.map = L.map ('map', {
-      center: [51.505, -0.09],
-      zoom: 13,
+      center: PCS.config['map']['initial']['position'],
+      zoom: PCS.config['map']['initial']['zoom'],
     });
     
     L.tileLayer('https://{s}.tile.jawg.io/jawg-' + map_type + '/{z}/{x}/{y}{r}.png?access-token=' + accessToken, {
 	    attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	    minZoom: 0,
-	    maxZoom: 30,
+	    minZoom: PCS.config['map']['minZoom'],
+	    maxZoom: PCS.config['map']['maxZoom'],
 	    accessToken: accessToken
     }).addTo (this.map);
   }

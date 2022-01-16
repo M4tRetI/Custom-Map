@@ -1,7 +1,5 @@
 <article>
-    <h3>Lorem ipsum dolor sit amet</h3>
-    <p>Questo è il primo esempio, seppur scarno, di un articolo che non so cosa scriverci all'interno.<br>Anche se ci provo verrà comunque uno schifo a profusione</p>
-    <span>Tag della card</span>
-    <span class="tag">Roma</span>
-    <span class="tag">Salsiccia</span>
+    <h3>{{ data?.title }}</h3>
+    <p [innerHTML]="data?.brief_description | arraybr"></p>
+    <span *ngFor="let tag_name of data['tags']" class="tag">{{ tag_name }}</span>
 </article>
