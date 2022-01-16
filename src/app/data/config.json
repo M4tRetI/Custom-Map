@@ -9,14 +9,16 @@
         "autoTheme": true
     },
     "map": {
-        "minZoom": 0,
-        "maxZoom": 30,
+        "minZoom": 3,
+        "maxZoom": 20,
         "initial": {
             "position": [51.505, -0.09],
             "zoom": 13
         },
         "marker": {
-            "icon": "img/marker.png"
+            "icon": "img/marker.png",
+            "size": [31, 35],
+            "anchor": [16, 37]
         }
     }
 }

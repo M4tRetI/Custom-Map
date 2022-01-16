@@ -13,23 +13,22 @@ import { accessToken } from "../../environments/secrets";
 })
 export class MapComponent implements OnInit {
   map: L.Map = null as any;
-  public marker_icon: string = "../assets/";
 
   constructor () { }
 
-  ngOnInit () {
-    this.marker_icon += PCS.config['map']['marker']['icon'];
-  }
+  ngOnInit () { }
 
   ngAfterViewInit () {
     this.initMap ();
+    this.addSpots (PCS.content as Array <any>);
   }
 
   initMap () {
     let map_type = (AppComponent.isDarkMode ? 'dark' : 'sunny');
-    
+    let center_map = PCS.config['map']['initial']['position'];
+    center_map [1] -= (screen.width * 0.65) / 22000;
     this.map = L.map ('map', {
-      center: PCS.config['map']['initial']['position'],
+      center: center_map,
       zoom: PCS.config['map']['initial']['zoom'],
     });
     
@@ -39,5 +38,20 @@ export class MapComponent implements OnInit {
 	    maxZoom: PCS.config['map']['maxZoom'],
 	    accessToken: accessToken
     }).addTo (this.map);
+  }
+
+  addSpots (markers: Array <any>) {
+    let markerIcon = L.icon ({
+      iconUrl: "../assets/" + PCS.config['map']['marker']['icon'],
+      iconSize: PCS.config['map']['marker']['size'],
+      iconAnchor: PCS.config['map']['marker']['anchor']
+    });
+
+    markers.forEach (marker => {
+      L.marker (marker.coord, {
+        icon: markerIcon,
+        title: marker.title
+      }).addTo (this.map);
+    });
   }
 }

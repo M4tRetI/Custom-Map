@@ -8,7 +8,7 @@
                 "Anche se ci provo verrà comunque uno schifo a profusione"
             ],
             "tags": ["Roma", "Salsiccia"],
-            "coord": [50.155, -0.04]
+            "coord": [51.529542, -0.124182]
         },
         {
             "unique_id": "seconda-card",
@@ -17,7 +17,7 @@
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit, Quisque molestie, orci at lacinia egestas, risus quam euismod libero, id blandit ligula erat ut nibh in dapibus commodo"
             ],
             "tags": ["Parco dei salici", "Altro esempio", "Sarajevo", "Anagrafica", "Biografia", "Parziale"],
-            "coord": [50.95, -0.06]
+            "coord": [51.462320, -0.159184]
         }
     ],
 
