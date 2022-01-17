@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
 import * as L from 'leaflet';
 import { PlatformCustomizationService as PCS } from '../../services/platform-customization.service';
 
 import { accessToken } from "../../environments/secrets";
+import { Observable, Subscription } from 'rxjs';
 
 
 @Component ({
@@ -12,15 +13,21 @@ import { accessToken } from "../../environments/secrets";
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  @Input () flytoEvent: Observable <any> = new Observable <any> ();
+  flytoEventSubscription: Subscription = new Subscription ();
   map: L.Map = null as any;
 
   constructor () { }
 
-  ngOnInit () { }
-
+  ngOnInit () {
+    this.flytoEventSubscription = this.flytoEvent.subscribe (({ options, focusAction }) => this.flyTo (options, focusAction));
+  }
   ngAfterViewInit () {
     this.initMap ();
     this.addSpots (PCS.content as Array <any>);
+  }
+  ngOnDestroy () {
+    this.flytoEventSubscription.unsubscribe ();
   }
 
   initMap () {
@@ -52,5 +59,25 @@ export class MapComponent implements OnInit {
         title: marker.title
       }).addTo (this.map);
     });
+  }
+
+  flyTo (options: any, focusAction: boolean) {
+    let position: Array <number>;
+    let zoom: number;
+    let screenMapRatio: number;
+    if (focusAction) {
+      zoom = PCS.config?.map?.marker?.zoomForFocus;
+      position = options;
+      screenMapRatio = 30000;
+    } else {
+      position = options.position;
+      zoom = options.zoom;
+      screenMapRatio = 350000;
+    }
+    console.log (position, zoom);
+    this.map.flyTo ({
+      lat: position[0], 
+      lng: position[1] - (screen.width * 0.2) / screenMapRatio
+    }, zoom);
   }
 }

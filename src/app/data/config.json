@@ -22,7 +22,8 @@
         "marker": {
             "icon": "img/marker.png",
             "size": [31, 33],
-            "anchor": [16, 37]
+            "anchor": [16, 37],
+            "zoomForFocus": 16
         }
     }
 }
