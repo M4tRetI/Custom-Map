@@ -67,12 +67,12 @@ div.container::-webkit-scrollbar-thumb {
     width: var(--sidePanel-width);
     height: var(--header-height);
     background: var(--header-background);
-    transition: all 0.2s ease;
     top: 0;
     left: 0;
     position: fixed;
     padding: 0 var(--sidePanel-padding);
     z-index: 9999999999999;
+    transition: all 0.2s ease;
 }
 #card-content div.topbar div.topbar-content {
     top: 50%;
@@ -136,6 +136,11 @@ div.container::-webkit-scrollbar-thumb {
     width: 23rem;
     padding: 1rem; 
     box-sizing: border-box;
+    border-radius: 7px;
+}
+#card-content section div.stock-images img:hover {
+    background: var(--img-hover-backgrund);
+    filter: var(--simple-dropShadow);
 }
 #card-content section hr {
     margin-top: 3rem;

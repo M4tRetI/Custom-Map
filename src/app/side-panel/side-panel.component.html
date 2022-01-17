@@ -28,12 +28,16 @@
         </div>
         <section>
             <div class="mip">
-                <img *ngIf="focusedCard?.images?.mip != ''" [src]="'../assets/' + focusedCard?.images?.mip" alt="Immagine più importante">
+                <a *ngIf="focusedCard?.images?.mip != ''" [href]="'../assets/' + focusedCard?.images?.mip" target="_blank">
+                    <img [src]="'../assets/' + focusedCard?.images?.mip" alt="Immagine più importante">
+                </a>
                 <h2 [innerHTML]="focusedCard?.title"></h2>
             </div>
             <p *ngFor="let text of focusedCard?.text" [innerHTML]="text"></p>
             <div class="stock-images">
-                <img *ngFor="let image of focusedCard?.images?.bottom" [src]="'../assets/' + image" alt="Immagine di repertorio">
+                <a *ngFor="let image of focusedCard?.images?.bottom" [href]="'../assets/' + image" target="_blank">
+                <img [src]="'../assets/' + image" alt="Immagine di repertorio">
+            </a>
             </div>
             <hr>
             <div class="tags">

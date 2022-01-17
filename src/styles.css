@@ -40,26 +40,29 @@ mark {
     --text-color: #1f2020;
     --card-border-color: var(--text-color);
     --highcontrast-text-color: #0f0f0f;
-    --backButton-hover-color: var(--scrollbar-thumb-background);
+    --backButton-hover-color: var(--mark-line-color);
     --toggle-sidePanel-hover-color: var(--scrollbar-thumb-background);
-    --mark-line-color: rgb(70, 101, 243);
-    --mark-text-color: rgb(70, 101, 243);
+    --mark-line-color: rgb(33, 66, 212);
+    --mark-text-color: rgb(33, 66, 212);
 
     --header-background: #FFFFFF;
     --sidePanel-background: var(--header-background);
     --toggle-sidePanel-background: var(--header-background);
-    --card-hover-background: rgba(70, 101, 243, 0.02);
-    --tag-background: rgba(70, 101, 243, 0.25);
-    --scrollbar-thumb-background: rgba(70, 101, 243, 0.466);
+    --card-hover-background: rgba(33, 66, 212, 0.02);
+    --tag-background: rgba(33, 66, 212, 0.25);
+    --scrollbar-thumb-background: rgba(33, 66, 212, 0.55);
+    --img-hover-backgrund: var(--tag-background);
 
     --sidePanel-padding: 3.5rem;
+
+    --simple-dropShadow: drop-shadow(7px 1px 3px rgba(0, 0, 0, 0.3));
 }
 
 [page-theme="dark"] {
     --header-background: #171818;
     --titles-color: #F1F1F1;
     --text-color: #e7e7e7;
-    --backButton-hover-color: #6e89ff;
+    --backButton-hover-color: rgb(64, 95, 235);
     --mark-line-color: var(--backButton-hover-color);
-    --mark-text-color: rgba(110, 137, 255);
+    --mark-text-color: rgba(64, 95, 235);
 }

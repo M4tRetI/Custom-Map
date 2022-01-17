@@ -79,7 +79,7 @@ export class MapComponent implements OnInit {
       zoom = options.zoom;
       screenMapRatio = 350000;
     }
-    console.log (position, zoom);
+
     this.map.flyTo ({
       lat: position[0], 
       lng: position[1] - (screen.width * 0.2) / screenMapRatio
