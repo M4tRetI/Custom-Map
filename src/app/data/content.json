@@ -23,13 +23,15 @@
 
     "contents": {
         "prima-card": {
-            "micp": ["img/side-panel-example_image.jpg"],
             "text": [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit, nibh in dapibus commodo, neque erat interdum dui, at faucibus ex turpis nec dolor. Nam feugiat iaculis risus vel lobortis. Nullam ultricies sapien sed turpis pellentesque, ac sollicitudin nibh egestas. Pellentesque posuere nisi consequat dolor condimentum finibus. Proin mi eros, efficitur iaculis egestas ac, aliquam et quam. Morbi dignissim tempor sodales. Vivamus eu nibh at libero tincidunt rhoncus a sit amet enim. Cras porttitor elementum tellus, nec euismod magna condimentum eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vitae accumsan dolor. Quisque lectus metus, elementum vitae auctor sit amet, mollis vel arcu. Nam dui risus, lobortis vitae nibh in, tincidunt auctor tellus. Suspendisse vel libero venenatis, laoreet mi vel, auctor dui. In hac habitasse platea dictumst. Vestibulum aliquam justo sem, a euismod magna ullamcorper non.",
                 "Quisque molestie, orci at lacinia egestas, risus quam euismod libero, id blandit ligula erat ut turpis. Sed ut tincidunt diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce auctor lorem nec sapien dignissim, eget imperdiet nulla pharetra. Cras auctor feugiat urna, id placerat eros auctor in. Phasellus venenatis eu massa iaculis commodo. Cras bibendum ex id congue congue."
             ],
             "authors": ["Matteo Remorini", "Matteo Remorini", "NOBODY"],
-            "images": ["img/side-panel-example_image.jpg", "img/logo.webp"],
+            "images": {
+                "micp": ["img/side-panel-example_image.jpg"],
+                "bottom": ["img/side-panel-example_image.jpg", "img/logo.webp"]
+            },
             "custom-css": "<style></style>"
         },
         "seconda-card": {
