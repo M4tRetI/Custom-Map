@@ -6,6 +6,11 @@ import { PlatformCustomizationService as PCS } from '../../services/platform-cus
 import { accessToken } from "../../environments/secrets";
 import { Observable, Subscription } from 'rxjs';
 
+/**
+ * ATTENZIONE:
+ * In caso di tanti marker conviene raggrupparli in clusters
+ */
+
 
 @Component ({
   selector: 'app-map',
