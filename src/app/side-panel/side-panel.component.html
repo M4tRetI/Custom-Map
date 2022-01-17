@@ -1,17 +1,45 @@
-<div class="container">
-    <section>
-        <div class="list-description">
-            <div class="image-container">
-                <div class="description-content">
-                    <h1>{{ page.name }}</h1>
-                    <p>{{ page.description }}</p>
+<div class="container list">
+    <div id="card-list" inner-content="list">
+        <section>
+            <div class="list-description">
+                <div class="image-container">
+                    <div class="description-content">
+                        <h1>{{ page.name }}</h1>
+                        <p>{{ page.description }}</p>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section>
+            <div class="card-list-container">
+                <app-card *ngFor="let card of cards" [id]="card?.unique_id" [data]="card" (click)="focusCard (card?.unique_id)"></app-card>
+            </div>
+        </section>
+    </div>
+
+    <!--  -->
+
+    <div id="card-content" inner-content="focus">
+        <div class="topbar">
+            <div class="topbar-content">
+                <button (click)="blurCard (focusedCard?.unique_id)"><i class="fas fa-chevron-left"></i>Indietro</button>
+                <h1>{{ page.name }}</h1>
+            </div>
         </div>
-    </section>
-    <section>
-        <div class="card-list-container">
-            <app-card *ngFor="let card of cards" attr.id="{{ card?.unique_id }}" [data]="card"></app-card>
-        </div>
-    </section>
+        <section>
+            <div class="mip">
+                <img *ngIf="focusedCard?.images?.mip != ''" [src]="'../assets/' + focusedCard?.images?.mip" alt="Immagine più importante">
+                <h2 [innerHTML]="focusedCard?.title"></h2>
+            </div>
+            <p *ngFor="let text of focusedCard?.text" [innerHTML]="text"></p>
+            <div class="stock-images">
+                <img *ngFor="let image of focusedCard?.images?.bottom" [src]="'../assets/' + image" alt="Immagine di repertorio">
+            </div>
+            <hr>
+            <div class="tags">
+                <span>Tag del contenuto:</span>
+                <span *ngFor="let tag_name of focusedCard?.tags" class="tag">{{ tag_name }}</span>
+            </div>
+        </section>
+    </div>
 </div>

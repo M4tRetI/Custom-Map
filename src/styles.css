@@ -16,31 +16,50 @@ div.leaflet-control-zoom.leaflet-bar.leaflet-control > a {
     color: var(--text-color) !important;
 }
 
+.hide {
+    display: none;
+}
+mark {
+    background: transparent;
+    text-decoration: dashed underline var(--mark-line-color) 3px;
+    color: var(--mark-text-color);
+}
+
 :root {
+    --header-width: var(--header-reduced-width);
     --header-maximized-width: 100%;
     --header-reduced-width: 65%;
-    --header-width: var(--header-reduced-width);
-    --header-height: 80px;
-    --side-panel-description-image-height: 85vh;
-    --sidePanel-width: 35%;
+    --header-maxi-reduced-width: 35%;
+    --sidePanel-width: var(--sidePanel-standard-width);
+    --sidePanel-standard-width: 35%;
+    --sidePanel-extended-width: 65%;
     --map-height: calc(100% - var(--header-height));
+    --header-height: 80px;
+
+    --titles-color: #171818;
+    --text-color: #1f2020;
+    --card-border-color: var(--text-color);
+    --highcontrast-text-color: #0f0f0f;
+    --backButton-hover-color: var(--scrollbar-thumb-background);
+    --toggle-sidePanel-hover-color: var(--scrollbar-thumb-background);
+    --mark-line-color: rgb(70, 101, 243);
+    --mark-text-color: rgb(70, 101, 243);
 
     --header-background: #FFFFFF;
     --sidePanel-background: var(--header-background);
     --toggle-sidePanel-background: var(--header-background);
-    --toggle-sidePanel-hover-color: var(--scrollbar-thumb-background);
-    --card-border-color: var(--text-color);
-    --card-hover-background: rgba(28, 60, 201, 0.02);
-    --tag-background: rgba(28, 60, 201, 0.25);
-    --titles-color: #171818;
-    --text-color: #1f2020;
-    --highcontrast-text-color: #0f0f0f;
+    --card-hover-background: rgba(70, 101, 243, 0.02);
+    --tag-background: rgba(70, 101, 243, 0.25);
+    --scrollbar-thumb-background: rgba(70, 101, 243, 0.466);
 
-    --scrollbar-thumb-background: rgb(28, 60, 201);
+    --sidePanel-padding: 3.5rem;
 }
 
 [page-theme="dark"] {
     --header-background: #171818;
     --titles-color: #F1F1F1;
     --text-color: #e7e7e7;
+    --backButton-hover-color: #6e89ff;
+    --mark-line-color: var(--backButton-hover-color);
+    --mark-text-color: rgba(110, 137, 255);
 }

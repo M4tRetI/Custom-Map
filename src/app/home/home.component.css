@@ -1,8 +1,11 @@
 #header {
-    --header-width: var(--header-maximized-width);
-}
-#header.reduced {
     --header-width: var(--header-reduced-width);
+}
+#header.maximize {
+    --header-width: var(--header-maximized-width) !important;
+}
+#header.maxi-reduced {
+    --header-width: var(--header-maxi-reduced-width);
 }
 
 #mappa {
@@ -10,8 +13,14 @@
     height: 100vh;
 }
 
+#side-panel {
+    --sidePanel-width: var(--sidePanel-standard-width);
+}
 #side-panel.reduced {
     display: none;
+}
+#side-panel.focused {
+    --sidePanel-width: var(--sidePanel-extended-width);
 }
 #side-panel:hover + #toggle-sidePanel {
     opacity: 1;
@@ -41,6 +50,9 @@
     color: var(--toggle-sidePanel-hover-color);
 }
 #toggle-sidePanel.sidePanel-reduced {
-    left: 55px;
+    left: 55px !important;
     opacity: 1;
+}
+#toggle-sidePanel.sidePanel-focused {
+    left: calc(var(--sidePanel-extended-width) + 55px);
 }

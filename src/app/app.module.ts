@@ -8,7 +8,6 @@ import { CardComponent } from './card/card.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 import { HomeComponent } from './home/home.component';
 import { ArraybrPipe } from '../pipes/arraybr.pipe';
-import { CardPanelComponent } from './card-panel/card-panel.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { CardPanelComponent } from './card-panel/card-panel.component';
     CardComponent,
     SidePanelComponent,
     HomeComponent,
-    ArraybrPipe,
-    CardPanelComponent
+    ArraybrPipe
   ],
   imports: [
     BrowserModule

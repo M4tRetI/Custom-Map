@@ -5,11 +5,14 @@ div.container {
     left: 0;
     position: absolute;
     background: var(--sidePanel-background);
-    padding: 3rem;
+    padding: var(--sidePanel-padding);
     z-index: 999999;
     box-sizing: border-box;
     overflow: auto;
 }
+div.container.list div[inner-content="focus"] { display: none; }
+div.container.focus div[inner-content="list"] { display: none; }
+
 section {
     margin-top: 3.5rem;
     margin-bottom: 1rem;
@@ -26,6 +29,7 @@ section div.description-content h1 {
     font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 2rem;
+    line-height: 3.4rem;
 }
 section div.description-content p {
     font-size: 1.4rem;
@@ -35,7 +39,6 @@ section div.description-content p {
 section div.image-container {
     box-sizing: border-box;
     width: 100%;
-    height: var(--side-panel-description-image-height);
     background: url('../../assets/img/side-panel-example_image.jpg') no-repeat top;
     background-size: cover;
     border-radius: 18px;
@@ -44,6 +47,7 @@ section div.image-container {
 
 /* Custom scrollbar */
 div.container::-webkit-scrollbar {
+    /*  PERCHE' NON SI VEDE PIU'?  */
     width: 18px;
     margin-right: 2rem;
 }
@@ -56,4 +60,100 @@ div.container::-webkit-scrollbar-thumb {
     border-radius: 100px;
     background-color: var(--scrollbar-thumb-background);
     background-clip: content-box;
+}
+
+#card-content div.topbar {
+    box-sizing: border-box;
+    width: var(--sidePanel-width);
+    height: var(--header-height);
+    background: var(--header-background);
+    transition: all 0.2s ease;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding: 0 var(--sidePanel-padding);
+    z-index: 9999999999999;
+}
+#card-content div.topbar div.topbar-content {
+    top: 50%;
+    left: 0;
+    position: relative;
+    transform: translateY(-50%);
+}
+#card-content div.topbar button {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1rem 0.8rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#card-content div.topbar button:hover {
+    color: var(--backButton-hover-color);
+}
+#card-content div.topbar button i {
+    font-size: 1.5rem;
+    margin-right: 1.2rem;
+    vertical-align: middle;
+}
+#card-content div.topbar h1 {
+    font-weight: 600;
+    display: inline;
+    margin-left: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 0.6rem;
+}
+
+#card-content section div.mip {
+    margin-bottom: 3rem;
+}
+#card-content section div.mip h2 {
+    width: 64%;
+    font-size: 3.9rem;
+    display: inline;
+    vertical-align: top;
+}
+#card-content section div.mip img {
+    width: 30%;
+    border-radius: 7px;
+    margin-right: 6%;
+    float: left;
+}
+#card-content section p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    opacity: 0.9;
+    line-height: 1.6rem;
+}
+#card-content section div.stock-images {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+}
+#card-content section div.stock-images img {
+    width: 23rem;
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+#card-content section hr {
+    margin-top: 3rem;
+    opacity: 0.3;
+}
+#card-content section div.tags {
+    margin-top: 3rem;
+}
+#card-content section div.tags span:first-child{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+#card-content section div.tags span.tag {
+    padding: 3px 10px;
+    background: var(--tag-background);
+    border-radius: 2px;
+    font-size: .92rem;
+    display: inline-block;
+    margin: 10px 15px 0 0;
 }

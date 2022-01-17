@@ -7,10 +7,9 @@
 </div>
 
 <div id="side-panel">
-    <app-side-panel></app-side-panel>
-    <app-card-panel></app-card-panel>
+    <app-side-panel (cardFocused)="cardFocused ($event)" (cardBlurred)="cardBlurred ($event)"></app-side-panel>
 </div>
 
 <div id="toggle-sidePanel" (click)="toggleSidePanel ()">
-    <i class="fas fa-chevron-{{ isSidePanelReduced ? 'right' : 'left' }}"></i>
+    <i class="fas fa-chevron-{{ staticSidePanelIsReduced ? 'right' : 'left' }}"></i>
 </div>

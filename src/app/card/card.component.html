@@ -1,5 +1,5 @@
 <article>
-    <h3>{{ data?.title }}</h3>
+    <h3 [innerHTML]="data?.title"></h3>
     <p [innerHTML]="data?.brief_description | arraybr"></p>
     <span *ngFor="let tag_name of data['tags']" class="tag">{{ tag_name }}</span>
 </article>
