@@ -8,6 +8,10 @@
     "page-settings": {
         "autoTheme": true
     },
+    "accessToken": {
+        "jawg_map": "",
+        "fontAwesome": ""
+    },
     "map": {
         "minZoom": 3,
         "maxZoom": 20,
@@ -17,7 +21,7 @@
         },
         "marker": {
             "icon": "img/marker.png",
-            "size": [31, 35],
+            "size": [31, 33],
             "anchor": [16, 37]
         }
     }

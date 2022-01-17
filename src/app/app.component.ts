@@ -12,6 +12,7 @@ export class AppComponent {
   constructor () {
     AppComponent.isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     PCS.importCustomizations ();
+    window.dispatchEvent (new CustomEvent ('PCSLoaded'));
     AppComponent.isDarkMode = AppComponent.isDarkMode && PCS.config['page-settings']['autoTheme'];
     document.documentElement.setAttribute ("page-theme", (AppComponent.isDarkMode ? "dark" : "light")); 
   }

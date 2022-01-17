@@ -32,11 +32,10 @@ export class MapComponent implements OnInit {
       zoom: PCS.config['map']['initial']['zoom'],
     });
     
-    L.tileLayer('https://{s}.tile.jawg.io/jawg-' + map_type + '/{z}/{x}/{y}{r}.png?access-token=' + accessToken, {
+    L.tileLayer('https://{s}.tile.jawg.io/jawg-' + map_type + '/{z}/{x}/{y}{r}.png?access-token=' + (PCS.config['accessToken']['jawg_map'] || accessToken), {
 	    attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	    minZoom: PCS.config['map']['minZoom'],
-	    maxZoom: PCS.config['map']['maxZoom'],
-	    accessToken: accessToken
+	    maxZoom: PCS.config['map']['maxZoom']
     }).addTo (this.map);
   }
 
