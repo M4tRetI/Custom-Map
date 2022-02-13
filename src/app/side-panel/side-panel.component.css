@@ -47,7 +47,6 @@ section div.image-container {
 
 /* Custom scrollbar */
 div.container::-webkit-scrollbar {
-    /*  PERCHE' NON SI VEDE PIU'?  */
     width: 18px;
     margin-right: 2rem;
 }
