@@ -29,8 +29,8 @@
             ],
             "authors": ["Matteo Remorini", "Matteo Remorini", "NOBODY"],
             "images": {
-                "mip": "img/side-panel-example_image.jpg",
-                "bottom": ["img/logo.webp", "img/side-panel-example_image.jpg", "img/logo.webp", "img/side-panel-example_image.jpg", "img/side-panel-example_image.jpg", "img/logo.webp", "img/logo.webp"]
+                "mip": "img/side-panel-image.jpg",
+                "bottom": ["img/logo.webp", "img/side-panel-image.jpg", "img/logo.webp", "img/side-panel-image.jpg", "img/side-panel-image.jpg", "img/logo.webp", "img/logo.webp"]
             }
         },
         "seconda-card": {
