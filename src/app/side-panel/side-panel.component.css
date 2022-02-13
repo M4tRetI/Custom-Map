@@ -39,7 +39,7 @@ section div.description-content p {
 section div.image-container {
     box-sizing: border-box;
     width: 100%;
-    background: url('../../assets/img/side-panel-example_image.jpg') no-repeat top;
+    background: url('../../assets/img/side-panel-image.jpg') no-repeat top;
     background-size: cover;
     border-radius: 18px;
     padding-top: 28.6rem;
