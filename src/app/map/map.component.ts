@@ -5,6 +5,7 @@ import { PlatformCustomizationService as PCS } from '../../services/platform-cus
 
 import { accessToken } from "../../environments/secrets";
 import { Observable, Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 /**
  * ATTENZIONE:
@@ -53,7 +54,7 @@ export class MapComponent implements OnInit {
 
   addSpots (markers: Array <any>) {
     let markerIcon = L.icon ({
-      iconUrl: "../assets/" + PCS.config['map']['marker']['icon'],
+      iconUrl: environment.prefixAssets + PCS.config['map']['marker']['icon'],
       iconSize: PCS.config['map']['marker']['size'],
       iconAnchor: PCS.config['map']['marker']['anchor']
     });

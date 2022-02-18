@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PlatformCustomizationService as PCS } from '../../services/platform-customization.service';
+import { environment } from 'src/environments/environment';
 
 @Component ({
   selector: 'app-side-panel',
@@ -10,6 +11,7 @@ export class SidePanelComponent implements OnInit {
   @Output () cardFocused: EventEmitter <any> = new EventEmitter <any> ();
   @Output () cardBlurred: EventEmitter <any> = new EventEmitter <any> ();
 
+  public environment = environment;
   public page = {
     name: "",
     description: "",
