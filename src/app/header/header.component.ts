@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlatformCustomizationService as PCS } from 'src/services/platform-customization.service';
+import { environment } from '../../environments/environment';
 
 @Component ({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { PlatformCustomizationService as PCS } from 'src/services/platform-custo
 export class HeaderComponent implements OnInit {
   public organization = {
     name: "",
-    icon: "../assets/"
+    icon: environment.prefixAssets
   };
 
   constructor () { }
