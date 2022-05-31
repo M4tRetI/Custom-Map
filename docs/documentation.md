@@ -90,7 +90,7 @@ The json files can contain malicoius code that is injected into html (XSS attack
   
 <br><hr>
 ## For development only
-You can set the secrets (access tokens) needed for the project into the `/src/environmentssecret.ts` file
+You can set the secrets (access tokens) needed for the project into the `/src/environments/secret.ts` file
 
 | Secret | Exported variable name | Type |
 |---| :--: |---|
